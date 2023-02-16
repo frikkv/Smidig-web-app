@@ -4,7 +4,6 @@ from api import*
 bilder = hent_bilder(iden)
 ider = hent_id()
 tittel = hent_tittel(iden)
-gjett = input("Hva heter filmen?")
 forsøk = 0 
 
 
