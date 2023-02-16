@@ -1,12 +1,15 @@
 from flask import Flask, render_template
-from api import hent_id
+from api import*
 
 app = Flask(__name__)
-id = hent_id()
 
 
 @app.route("/")
 def index():
     navn = "Api"
-    return render_template("index.html", navn=navn, id=id)
+    bilder = hent_bilder(iden)
+    ider = hent_id()
+    tittel = hent_tittel(iden)
+
+    return render_template("index.html", navn=navn, ider=ider, bilder=bilder,tittel=tittel)
 

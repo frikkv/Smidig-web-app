@@ -12,7 +12,7 @@ for i in range(0,250):
     tittel = data["items"][nmr]["title"]
     alle_titler.append(tittel)
     nmr += 1
-print(alle_titler)
+#print(alle_titler)
 
 
 def hent_id():
@@ -25,21 +25,29 @@ def hent_bilder(iden):
     resultat = requests.get(url, headers= {"User-Agent": "Frikk"})
     data = resultat.json()
     nmr = 0 
+    alle_bilder = []
     for i in data:    
         bilder = data["items"][nmr]["image"]
-        print(bilder)
+        alle_bilder.append(bilder)
         nmr +=1
+         print(alle_bilder)
+        
 
 def hent_tittel(iden):
     url = f"https://imdb-api.com/en/API/Images/k_yfwl9e9x/{iden}"
     resultat = requests.get(url, headers= {"User-Agent": "Frikk"})
     data = resultat.json()
     tittel = data["title"]
-    print(tittel)
+    return(tittel)
 
-#iden = hent_id()
-#hent_bilder(iden)
-#hent_tittel(iden)
+def display():
+    for bilder in 
+
+
+
+iden = hent_id()
+hent_bilder(iden)
+hent_tittel(iden)
 
 
 
