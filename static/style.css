@@ -27,16 +27,16 @@ button{
 }
 
 button{
-    background: none;
-    color: #ccc;
-    width: 240px;
-    height: 80px;
-    border: 1px solid #E90201;
-    font-size: 18px;
+    background-color: rgba(233, 2, 1, 0.8);
+    color: aliceblue;
+    width: 260px;
+    height: 90px;
+    border: 2px solid black;
+    font-size: 40px;
     border-radius: 4px;
     transition: .6s;
     overflow: hidden;
-
+    
 }
 
 button:focus{

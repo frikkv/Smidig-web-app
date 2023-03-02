@@ -1,5 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from api import*
+
 
 bilder = hent_bilder(iden)
 ider = hent_id()
@@ -19,16 +20,20 @@ def rute_seier():
 @app.route("/spill")
 def rute_spill():
     global forsok,tittel
-    return render_template("spill.html", ider=ider,bilder=alle_bilder[forsok],tittel=tittel)   
+    print(bilder, forsok)
+    return render_template("spill.html", ider=ider,bilder=bilder[forsok],tittel=tittel)   
 
 @app.route("/gjett",methods=["POST"])
 def rute_gjett():
     global forsok
     forsok += 1
-    gjett = requests.form["gjett"]
+    gjett = request.form["gjett"]
     if gjett == tittel:
         return rute_seier()
+    elif forsok == 6:
+        return rute_tap()
     else:
         return rute_spill()
+
   
 

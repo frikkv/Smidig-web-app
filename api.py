@@ -7,7 +7,6 @@ resultat = requests.get(url, headers= {"User-Agent": "Frikk"})
 data = resultat.json()
 
 
-alle_bilder = []
 alle_titler = []
 nmr = 0
 
@@ -32,12 +31,13 @@ def hent_bilder(iden):
     url = f"https://imdb-api.com/en/API/Images/k_yfwl9e9x/{iden}"
     resultat = requests.get(url, headers= {"User-Agent": "Frikk"})
     data = resultat.json()
+    alle_bilder = []
     nmr = 0 
     for i in range(0,5):    
         bilder = data["items"][nmr]["image"]
         alle_bilder.append(bilder)
         nmr +=1
-        return(alle_bilder)
+    return(alle_bilder)
 
 
         
