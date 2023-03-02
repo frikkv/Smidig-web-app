@@ -8,13 +8,6 @@ forsok = 0
 
 app = Flask(__name__)
 
-
-def sjekk_svar():
-    if gjett != tittel: 
-        neste_runde()
-    else: 
-        print("Riktig")
-
 @app.route("/")
 def index():
     navn = "Api"

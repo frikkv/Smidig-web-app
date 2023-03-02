@@ -1,0 +1,21 @@
+body{
+    background: #151519;
+    margin: 0;
+    padding: 0;
+
+}
+
+#bildet{
+    height: 600px;
+    width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+form{
+    display: flex;
+    justify-content: center;   
+}
+
